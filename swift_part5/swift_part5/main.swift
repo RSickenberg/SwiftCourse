@@ -10,4 +10,8 @@ import Foundation
 
 var complexOne = ComplexeNumber()
 
-complexOne.printComplex(ComplexeNumber.init(realPart: 12))
+complexOne.delegate = nil
+complexOne.printComplex()
+
+complexOne.delegate = CompleteFunctionLib()
+complexOne.printComplex()

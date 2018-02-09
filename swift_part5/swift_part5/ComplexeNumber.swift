@@ -76,7 +76,7 @@ class ComplexeNumber: NSObject {
 //            print(String(format: "The complex number is: ((%.1f + %.1f))", self.realPart, self.imaginaryPart))
 ////        }
 //    }
-    func printComplex(_ completeNumberToPrint: ComplexeNumber) {
+    func printComplex() {
         if self.delegate != nil {
             self.delegate!.printComplex(self)
         } else {
