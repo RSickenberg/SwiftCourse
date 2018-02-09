@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/romainsickenberg/Desktop/CFTP/Swift/swift_part5/swift_part5/ComplexeNumber.swift">
+   </FileRef>
+   <FileRef
+      location = "self:swift_part5.xcodeproj">
+   </FileRef>
+</Workspace>
