@@ -10,6 +10,7 @@ import Foundation
 
 protocol ComplexeLibraryDefProtocol {
     func printComplex(_ complexNumberToPrint: ComplexeNumber)
+    // optional func anotherPrintComplex(complexNumberToPrint)
 }
 
 class ComplexeNumber: NSObject {
@@ -28,6 +29,7 @@ class ComplexeNumber: NSObject {
     
     var realPart: Float
     var imaginaryPart: Float
+    var delegate: ComplexeLibraryDefProtocol?
     
     override init() {
         self.realPart = 0
@@ -48,7 +50,7 @@ class ComplexeNumber: NSObject {
     convenience init(realPart: Float) {
         self.init(realPart: realPart, imaginaryPart: 0)
         
-        print("Object ok")
+        print("Object ok.")
     }
     
     // MARK: - OPERATIONS
@@ -67,11 +69,23 @@ class ComplexeNumber: NSObject {
         return self
     }
     
-    func printComplex() {
-//        if self.delegate != nil {
-//            self.delegate!.printComplex(self)
-//        } else {
-            print(String(format: "The complex number is: ((%.1f + %.1f))", self.realPart, self.imaginaryPart))
-//        }
+//    func printComplex() {
+////        if self.delegate != nil {
+////            self.delegate!.printComplex(self)
+////        } else {
+//            print(String(format: "The complex number is: ((%.1f + %.1f))", self.realPart, self.imaginaryPart))
+////        }
+//    }
+    func printComplex(_ completeNumberToPrint: ComplexeNumber) {
+        if self.delegate != nil {
+            self.delegate!.printComplex(self)
+        } else {
+            standardPrintComplex()
+        }
     }
+    
+    func standardPrintComplex() {
+        print(String(format: "The complex number is: ((%.1f + %.1f))", self.realPart, self.imaginaryPart))
+    }
+    
 }

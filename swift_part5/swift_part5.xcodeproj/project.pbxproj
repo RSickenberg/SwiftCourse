@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07395FE1202DDF94007B2033 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07395FE0202DDF94007B2033 /* main.swift */; };
 		07395FE5202DE0AD007B2033 /* ComplexeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07395FE4202DE0AD007B2033 /* ComplexeNumber.swift */; };
+		07FFFDD1202DE76B00B7342E /* ComplexFunctionLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FFFDD0202DE76B00B7342E /* ComplexFunctionLib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		07395FD2202DDE60007B2033 /* swift_part5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = swift_part5; sourceTree = BUILT_PRODUCTS_DIR; };
 		07395FE0202DDF94007B2033 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		07395FE4202DE0AD007B2033 /* ComplexeNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComplexeNumber.swift; path = /Users/romainsickenberg/Desktop/CFTP/Swift/swift_part5/swift_part5/ComplexeNumber.swift; sourceTree = "<absolute>"; };
+		07FFFDD0202DE76B00B7342E /* ComplexFunctionLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexFunctionLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				07395FE4202DE0AD007B2033 /* ComplexeNumber.swift */,
+				07FFFDD0202DE76B00B7342E /* ComplexFunctionLib.swift */,
 				07395FE0202DDF94007B2033 /* main.swift */,
 			);
 			path = swift_part5;
@@ -125,6 +128,7 @@
 			files = (
 				07395FE1202DDF94007B2033 /* main.swift in Sources */,
 				07395FE5202DE0AD007B2033 /* ComplexeNumber.swift in Sources */,
+				07FFFDD1202DE76B00B7342E /* ComplexFunctionLib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

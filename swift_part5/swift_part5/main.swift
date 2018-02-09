@@ -10,4 +10,4 @@ import Foundation
 
 var complexOne = ComplexeNumber()
 
-complexOne.printComplex()
+complexOne.printComplex(ComplexeNumber.init(realPart: 12))
