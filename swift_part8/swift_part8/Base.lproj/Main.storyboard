@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_part8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT YOUR MEAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWP-xs-WXy">
+                                <rect key="frame" x="16" y="44" width="179" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfp-C9-eSh">
+                                <rect key="frame" x="0.0" y="252" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Aoy-hA-WHd"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECTED DAY/MEAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-L8-XAE">
+                                <rect key="frame" x="16" y="482" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYY-W1-5QW">
+                                <rect key="frame" x="32" y="575" width="310" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.096128274128226776" blue="0.015574564216541353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WWP-xs-WXy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="15K-3Z-OVa"/>
+                            <constraint firstItem="LYY-W1-5QW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="3dZ-GD-f1r"/>
+                            <constraint firstItem="dgy-L8-XAE" firstAttribute="leading" secondItem="WWP-xs-WXy" secondAttribute="leading" id="49y-lj-nQ0"/>
+                            <constraint firstAttribute="trailing" secondItem="qfp-C9-eSh" secondAttribute="trailing" id="H9e-KT-I5S"/>
+                            <constraint firstItem="LYY-W1-5QW" firstAttribute="top" secondItem="dgy-L8-XAE" secondAttribute="bottom" constant="72" id="OAh-8e-1ye"/>
+                            <constraint firstItem="LYY-W1-5QW" firstAttribute="centerX" secondItem="qfp-C9-eSh" secondAttribute="centerX" id="VGW-UA-lg0"/>
+                            <constraint firstItem="qfp-C9-eSh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ymm-8T-Ps6"/>
+                            <constraint firstItem="dgy-L8-XAE" firstAttribute="trailing" secondItem="WWP-xs-WXy" secondAttribute="trailing" constant="11" id="c4e-nc-jlQ"/>
+                            <constraint firstItem="WWP-xs-WXy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g46-gY-OjR"/>
+                            <constraint firstItem="dgy-L8-XAE" firstAttribute="top" secondItem="qfp-C9-eSh" secondAttribute="bottom" constant="68" id="gBV-KF-6TE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WWP-xs-WXy" secondAttribute="trailing" constant="180" id="qkJ-rA-zcr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qfp-C9-eSh" secondAttribute="bottom" constant="364" id="rPp-ck-yk8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="qfp-C9-eSh" id="lZQ-sT-qT5"/>
+                        <outlet property="selected_label" destination="LYY-W1-5QW" id="jFx-u8-E58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+</document>
