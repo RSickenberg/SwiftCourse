@@ -8,7 +8,7 @@
 
 import Foundation
 
-var complexOne = ComplexeNumber()
+var complexOne = ComplexeNumber(realPart: 12.42, imaginaryPart: 12.34)
 
 complexOne.delegate = nil
 complexOne.printComplex()
