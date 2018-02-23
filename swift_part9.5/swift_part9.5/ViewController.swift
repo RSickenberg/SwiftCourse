@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, updateStatusSwitchProtocol {
     
     let daysOfWeek = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
-    let ficheContacts: [(photo: String, nomPrenom: String, adresse: String, tel: String, marie: Bool)] = [("romainPic", "Romain Sickenberg", "Route de genève 4", "078.907.32.02", false),
-                                                                                                          ("ivanPic", "Ivan Ilic", "Route de bla 3", "087.312.31.43", true)]
+    var ficheContacts: [(photo: String, nomPrenom: String, adresse: String, tel: String, marie: Bool)] = [
+        ("romainPic", "Romain Sickenberg", "Route de genève 4", "078.907.32.02", false),
+        ("ivanPic", "Ivan Ilic", "Route de bla 3", "087.312.31.43", true)
+    ]
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -57,6 +59,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let contactCell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath) as! FicheContactTableViewCell
         
         contactCell.prenom_label.text = ficheContacts[indexPath.row].nomPrenom
+        contactCell.adresse_label.text = ficheContacts[indexPath.row].adresse
+        contactCell.telephone_label.text = ficheContacts[indexPath.row].tel
+        contactCell.marie_switch.setOn(ficheContacts[indexPath.row].marie, animated: true)
+        contactCell.recordId = indexPath.row
+        contactCell.updateSwitchDelegate = self
+        
         return contactCell
+    }
+    
+    func updateStatusSwitch(newValue: Bool, record: Int) {
+        var contactCell = ficheContacts[record]
+        contactCell.marie = newValue
+        ficheContacts[record] = contactCell
+        
+        self.tableView.reloadData()
+        
+        print("Fiche contacts: ", contactCell)
     }
 }

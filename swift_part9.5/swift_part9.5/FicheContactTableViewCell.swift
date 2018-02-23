@@ -7,15 +7,27 @@
 //
 
 import UIKit
+protocol updateStatusSwitchProtocol {
+    func updateStatusSwitch(newValue: Bool, record: Int)
+}
 
 class FicheContactTableViewCell: UITableViewCell {
 
+    var updateSwitchDelegate: updateStatusSwitchProtocol?
+    var recordId: Int = 0
+    
     @IBOutlet weak var marie_switch: UISwitch!
     @IBOutlet weak var picture_view: UIImageView!
     @IBOutlet weak var telephone_label: UILabel!
     @IBOutlet weak var adresse_label: UILabel!
     @IBOutlet weak var prenom_label: UILabel!
     @IBAction func marie_switch(_ sender: UISwitch) {
+        
+        if updateSwitchDelegate == nil {
+            print("Delegate not init")
+        } else {
+            self.updateSwitchDelegate?.updateStatusSwitch(newValue: sender.isOn, record: recordId)
+        }
         
     }
     override func awakeFromNib() {
